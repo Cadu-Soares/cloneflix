@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap'; 
 
 const Filme = ({ filme }) => {
 
@@ -12,8 +13,8 @@ const Filme = ({ filme }) => {
       <td>{filme.categoria}</td>
       <td>{filme.ano}</td>
       <td className='text-right'>
-          <button className='btn btn-info' onClick={showFilmName}>Informações</button>{' '}
-          <button className='btn btn-danger'>Excluir</button>
+      <Button color="info" size="" onClick={showFilmName}>Informações</Button>{ ' ' }
+      <Button color="danger" size="">Excluir</Button>
       </td>
     </tr>
   )
