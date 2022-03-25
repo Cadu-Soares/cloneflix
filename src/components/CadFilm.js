@@ -1,14 +1,17 @@
-import React from 'react';
+import React,  { useState} from 'react';
 import { Button } from 'reactstrap';
 import { Alert } from 'reactstrap';
 
+const CadFilm = () => {
 
-const CadFilm = ({ filme, setFilme }) => {
+  const [filme, setFilme] = useState({
+    nome:'',
+    categoria: null,
+    ano: 0,
+  })
 
-  // const cadastrar = () => {
-  //   console.log(filme)
-  // }
-  
+  const cadastrar = filme
+
   return(
     <Alert color="secondary">
     <div className="row">
@@ -60,11 +63,18 @@ const CadFilm = ({ filme, setFilme }) => {
       </div>
     </div>
     <br />
+    {/* <button 
+      type="button" 
+      className="btn btn-success btn-lg btn-block"
+      onAuxClick={cadastrar}>
+      Cadastrar
+    </button> */}
+
     <Button 
       block 
       color="success" 
       size="lg" 
-      // onClick={cadastrar}
+      onClick={cadastrar}
       >
       Cadastrar
     </Button>
