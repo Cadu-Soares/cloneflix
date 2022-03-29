@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 
-const CadFilm = ({ filmes, setFilmes }) => {
-  
+const CadFilm = (props) => {
+
   const [filme, setFilme] = useState({
     nome: '',
     categoria: null,
@@ -9,12 +9,12 @@ const CadFilm = ({ filmes, setFilmes }) => {
   });
 
   const cadastrar = () => {
-    setFilmes([filme, ...filmes])
+    props.setFilmes([filme, ...props.filmes])
   };
 
   return (
     <>
-      <div class="alert alert-secondary" role="alert">
+      <div className="alert alert-secondary" role="alert">
         <div className="row">
           <br />
           <div className="col-4">
@@ -30,7 +30,6 @@ const CadFilm = ({ filmes, setFilmes }) => {
               }} 
             />
             </div>
-          
           <div className="col-4">
             <label htmlFor="">Categoria</label>
             <select 
@@ -49,7 +48,6 @@ const CadFilm = ({ filmes, setFilmes }) => {
               <option value="Romance">Romance</option>
             </select>
           </div>
-
           <div className="col-4">
             <label htmlFor="">Ano</label>
             <input 
@@ -79,7 +77,6 @@ const CadFilm = ({ filmes, setFilmes }) => {
 }
 
 export default CadFilm
-
 
 
 

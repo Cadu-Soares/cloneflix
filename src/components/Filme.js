@@ -17,7 +17,7 @@ const Filme = ({ filme }) => {
       <Button color="danger" size="">Excluir</Button>
       </td>
     </tr>
-  )
-}
+    )
+  }
 
 export default Filme
