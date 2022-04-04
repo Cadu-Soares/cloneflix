@@ -14,7 +14,7 @@ const CadFilm = (props) => {
 
   return (
     <>
-      <div className="alert alert-secondary" role="alert">
+      <div className="jumbotron" role="alert">
         <div className="row">
           <br />
           <div className="col-4">
